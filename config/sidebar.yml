@@ -8,6 +8,8 @@
   link: '/numbers-meaning'
 - label: 'Padrão de Vida'
   link: '/life'
+- label: 'Pontos de Perícia'
+  link: '/skill-level'
 # - label: 'FAQ'
 #   link: '/faq'
 # - label: Migration from 1.x

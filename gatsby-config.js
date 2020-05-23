@@ -29,7 +29,7 @@ module.exports = {
         docsPath: `src/docs`,
         githubUrl: `https://github.com/danilexx/cutulu`,
         baseDir: `/`,
-        basePath: "/"
+        basePath: "/guides"
       }
     },
     "gatsby-plugin-styled-components",
