@@ -1,5 +1,7 @@
 # Sidebar navigation
 
+- label: 'Historia'
+  link: '/history'
 - label: 'Começando'
   link: '/'
 - label: 'Significado dos Numeros'
