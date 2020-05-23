@@ -2,8 +2,8 @@ import React from "react";
 import { createGlobalStyle, ThemeProvider } from "src/lib/StyledComponents";
 import { theme } from "src/theme";
 import Nav from "src/components/Nav";
-import Footer from "src/components/Footer";
-import { useLocation } from "react-use";
+// import Footer from "src/components/Footer";
+// import { useLocation } from "react-use";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -76,14 +76,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
 `;
-const getDocsFromLocation = (path: string | undefined) => {
-  if (typeof path !== "string") {
-    return false;
-  }
-  const paths = path.split("/");
-  if (paths[1] === "docs") return true;
-  return false;
-};
+// const getDocsFromLocation = (path: string | undefined) => {
+//   if (typeof path !== "string") {
+//     return false;
+//   }
+//   const paths = path.split("/");
+//   if (paths[1] === "docs") return true;
+//   return false;
+// };
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // const location = useLocation();

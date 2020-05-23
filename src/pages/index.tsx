@@ -5,7 +5,10 @@ import { navigate } from "gatsby";
 
 const Home: React.FC = () => {
   useTitle("Cutulu | Home");
-  navigate("/guides");
+  if (typeof window !== "undefined") {
+    navigate("/guides");
+  }
+
   return null;
 };
 
