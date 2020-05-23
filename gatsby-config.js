@@ -28,8 +28,8 @@ module.exports = {
       options: {
         docsPath: `src/docs`,
         githubUrl: `https://github.com/danilexx/cutulu`,
-        baseDir: `guides/`,
-        basePath: "/guides"
+        baseDir: `/`,
+        basePath: "/"
       }
     },
     "gatsby-plugin-styled-components",
