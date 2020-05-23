@@ -6,6 +6,8 @@
   link: '/'
 - label: 'Significado dos Numeros'
   link: '/numbers-meaning'
+- label: 'Padrão de Vida'
+  link: '/life'
 # - label: 'FAQ'
 #   link: '/faq'
 # - label: Migration from 1.x
