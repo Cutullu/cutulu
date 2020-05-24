@@ -4,6 +4,9 @@ import { MdEdit } from "react-icons/md";
 
 export default function EditGithub({ githubEditUrl }) {
   if (githubEditUrl) {
+    const [https, ...rest] = githubEditUrl.split("/");
+    const newLink = `${https}//${rest}`
+    console.log(githubEditUrl, newLink);
     return (
       <a
         href={githubEditUrl}
