@@ -1,6 +1,6 @@
 # Sidebar navigation
 - label: 'Começando'
-    link: '/'
+  link: '/'
 - label: 'Manual'
   items:
     - label: 'Historia'
