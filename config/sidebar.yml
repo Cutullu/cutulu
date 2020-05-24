@@ -1,10 +1,10 @@
 # Sidebar navigation
+- label: 'Começando'
+    link: '/'
 - label: 'Manual'
   items:
     - label: 'Historia'
       link: 'manual/history'
-    - label: 'Começando'
-      link: 'manual/'
     - label: 'Significado dos Numeros'
       link: 'manual/numbers-meaning'
     - label: 'Padrão de Vida'
