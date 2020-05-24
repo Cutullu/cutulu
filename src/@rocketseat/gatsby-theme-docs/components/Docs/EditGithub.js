@@ -5,11 +5,10 @@ import { MdEdit } from "react-icons/md";
 export default function EditGithub({ githubEditUrl }) {
   if (githubEditUrl) {
     const [https, ...rest] = githubEditUrl.split("/");
-    const newLink = `${https}//${rest}`
-    console.log(githubEditUrl, newLink);
+    const newLink = `${https}//${rest.join("/")}`
     return (
       <a
-        href={githubEditUrl}
+        href={newLink}
         target="_blank"
         // rel="noopener noreferrer"
         style={{
