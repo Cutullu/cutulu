@@ -1,15 +1,16 @@
 # Sidebar navigation
-
-- label: 'Historia'
-  link: '/history'
-- label: 'Começando'
-  link: '/'
-- label: 'Significado dos Numeros'
-  link: '/numbers-meaning'
-- label: 'Padrão de Vida'
-  link: '/life'
-- label: 'Pontos de Perícia'
-  link: '/skill-level'
+- label: 'Manual'
+  items:
+    - label: 'Historia'
+      link: 'manual/history'
+    - label: 'Começando'
+      link: 'manual/'
+    - label: 'Significado dos Numeros'
+      link: 'manual/numbers-meaning'
+    - label: 'Padrão de Vida'
+      link: 'manual/life'
+    - label: 'Pontos de Perícia'
+      link: 'manual/skill-level'
 # - label: 'FAQ'
 #   link: '/faq'
 # - label: Migration from 1.x

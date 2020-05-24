@@ -8,7 +8,7 @@ export default function EditGithub({ githubEditUrl }) {
       <a
         href={githubEditUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        // rel="noopener noreferrer"
         style={{
           display: "flex",
           alignItems: "center",
