@@ -27,7 +27,7 @@ module.exports = {
       resolve: `@rocketseat/gatsby-theme-docs`,
       options: {
         docsPath: `src/docs`,
-        githubUrl: `https://github.com/danilexx/cutulu`,
+        githubUrl: `https:///github.com/danilexx/cutulu`,
         baseDir: `/`,
         basePath: "/guides"
       }
