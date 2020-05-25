@@ -17,6 +17,10 @@
 #   link: '/migration-guide'
 # - label: 'Github'
 #   link: 'https://github.com/Rocketseat/unform'
+- label: Etapas de Criação de Investigador
+  items:
+    - label: '1: Gerar os Atributos'
+      link: 'steps/1'
 - label: Capitulos
   items:
     - label: '14 - Monstros, Feras e Deuses Alienígenas'

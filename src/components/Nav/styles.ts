@@ -22,9 +22,9 @@ export const Wrapper = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: ${props => props.theme.primary};
+  background-color: ${props => props.theme.secondary};
   z-index: 25;
-  /* height: 10vh; */
+  height: 10vh;
 `;
 
 export const Links = styled.ul`

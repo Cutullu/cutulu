@@ -18,7 +18,7 @@ module.exports = {
     siteImage: ``,
     siteLanguage: `pt`,
     basePath: `/guides`,
-    themeColor: `#2C5E3E`,
+    themeColor: `#99F877`,
     footer: ``
   },
   plugins: [

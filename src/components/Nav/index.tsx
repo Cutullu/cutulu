@@ -27,8 +27,8 @@ const Nav = () => {
   }, [isMenuOpened, isSmall]);
   return (
     <>
-      <Wrapper>
-        <Container>
+      <Wrapper className="nav">
+        <Container >
           <MenuLink href="/">
             <FilledLogo />
           </MenuLink>
