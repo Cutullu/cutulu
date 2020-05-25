@@ -51,9 +51,9 @@ export default function GlobalStyle() {
           font-size: 18px;
         }
 
-        h4 {
-          font-size: 16px;
-        }
+        
+
+        
 
         h2,
         h3,
@@ -63,6 +63,11 @@ export default function GlobalStyle() {
           color: white;
           margin: 24px 0 16px 0;
           font-weight: normal;
+        }
+
+        h4 {
+          font-size: 16px;
+          margin: 12px 0 16px 0;
         }
 
         p {

@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { darken } from 'polished';
+import styled from "@emotion/styled";
+import { darken } from "polished";
 
 export const Container = styled.div`
   position: sticky;
@@ -32,7 +32,7 @@ export const Container = styled.div`
       /* margin-bottom: 12px; */
       line-height: 1.1;
 
-      p {
+      a {
         font-size: 13px;
         color: #999999;
         font-weight: 400;
@@ -41,7 +41,7 @@ export const Container = styled.div`
         cursor: pointer;
         margin: 0;
         &:hover {
-          color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
+          color: ${({ theme }) => darken("0.2", theme.colors.sidebar.link)};
         }
       }
     }

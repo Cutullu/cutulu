@@ -8,13 +8,12 @@ import {
   Wrapper,
   MenuWrap,
   BurguerMenu,
-  MenuLink,
-  StartButton
+  MenuLink
 } from "./styles";
 import { slide as Menu } from "react-burger-menu";
 import { useMedia, useToggle, useLockBodyScroll } from "react-use";
 
-const Nav: React.FC<{menuAction?:any}> = ({menuAction}) => {
+const Nav: React.FC<{ menuAction?: any }> = ({ menuAction }) => {
   const isSmall = useMedia("(max-width: 800px)");
   const [isMenuOpened, toggleMenu] = useToggle(false);
   useLockBodyScroll(isMenuOpened);
@@ -29,7 +28,7 @@ const Nav: React.FC<{menuAction?:any}> = ({menuAction}) => {
   return (
     <>
       <Wrapper className="nav">
-        <Container >
+        <Container>
           <MenuLink href="/">
             <FilledLogo />
           </MenuLink>
@@ -47,7 +46,7 @@ const Nav: React.FC<{menuAction?:any}> = ({menuAction}) => {
             <BurguerMenu
               isMenuOpened={isMenuOpened}
               pinned={isMenuOpened}
-              onClick={() => menuAction ? menuAction() :toggleMenu()}
+              onClick={() => (menuAction ? menuAction() : toggleMenu())}
             />
           ) : (
             <Links>

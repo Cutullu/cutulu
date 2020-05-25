@@ -88,12 +88,12 @@ const getDocsFromLocation = (path: string | undefined) => {
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
-  const small = useMedia('(min-width: 780px');
+  const small = useMedia("(min-width: 780px");
   const isGuides = getDocsFromLocation(location.pathname);
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      {(isGuides && small) && <Nav />}
+      {isGuides && small && <Nav />}
       {children}
       {/* {!isDocs && <Footer />} */}
     </ThemeProvider>

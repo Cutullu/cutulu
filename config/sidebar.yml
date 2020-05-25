@@ -21,6 +21,8 @@
   items:
     - label: '1: Gerar os Atributos'
       link: 'steps/1'
+    - label: '2: Determinar a Ocupação'
+      link: 'steps/2'
 - label: Capitulos
   items:
     - label: '14 - Monstros, Feras e Deuses Alienígenas'

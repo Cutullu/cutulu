@@ -1,29 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { animateScroll as scroll } from "react-scroll";
-import slug from '@rocketseat/gatsby-theme-docs/src/util/slug';
+/* eslint-disable react/forbid-prop-types */
+import React from "react";
+import PropTypes from "prop-types";
+import slugify from "@rocketseat/gatsby-theme-docs/src/util/slug";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 import useHash from "../../../../../utils/useHash";
 
+const handleGoTo = slug => {
+  if (!slug) return;
+  if (typeof window === "undefined") return;
+  const elementToGo = document.querySelector(slug);
+  const { y } = elementToGo.getBoundingClientRect();
+  const nav = document.querySelector(`div.nav`);
+  const navSize = nav.getBoundingClientRect().height;
+  window.scrollBy(0, y - navSize - 20);
+  // scroll.scrollMore(y - navSize - 20);
+};
 export default function TableOfContents({ headings }) {
-  const [hash, setHash] = useHash();
-  React.useEffect(()=>{
-    setTimeout(()=>{
+  const [hash] = useHash();
+  React.useEffect(() => {
+    setTimeout(() => {
       handleGoTo(decodeURI(hash));
-    }, 80)
-    
-  }, [hash])
-  const handleGoTo = (slug) => {
-    if(!slug) return;
-    if(typeof window === 'undefined') return;
-    const elementToGo = document.querySelector(slug);
-    const y = elementToGo.getBoundingClientRect().y;
-    const nav = document.querySelector(`div.nav`);
-    const navSize = nav.getBoundingClientRect().height;
-    window.scrollBy(0, y - navSize - 20)
-    // scroll.scrollMore(y - navSize - 20);
-  }
+    }, 80);
+  }, [hash]);
   if (headings && headings.length !== 0) {
     return (
       <Container>
@@ -34,9 +33,7 @@ export default function TableOfContents({ headings }) {
               .filter(heading => heading.depth === 2)
               .map(heading => (
                 <li key={heading.value}>
-                  <p onClick={()=>{
-                    setHash(slug(heading.value))
-                    }} >{heading.value}</p>
+                  <a href={`#${slugify(heading.value)}`}>{heading.value}</a>
                 </li>
               ))}
           </ul>
@@ -49,9 +46,9 @@ export default function TableOfContents({ headings }) {
 }
 
 TableOfContents.propTypes = {
-  headings: PropTypes.array,
+  headings: PropTypes.array
 };
 
 TableOfContents.defaultProps = {
-  headings: null,
+  headings: null
 };
