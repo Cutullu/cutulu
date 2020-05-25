@@ -23,6 +23,8 @@
       link: 'steps/1'
     - label: '2: Determinar a Ocupação'
       link: 'steps/2'
+    - label: '3: Decidir as Perícias e Alocar os Pontos de Perícias'
+      link: 'steps/3'
 - label: Capitulos
   items:
     - label: '14 - Monstros, Feras e Deuses Alienígenas'
