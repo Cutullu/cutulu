@@ -113,6 +113,9 @@ export const MenuWrap = styled.div`
     left: 0;
     z-index: 55 !important;
   }
+  .bm-menu{
+    height: 100vh !important;
+  }
   .bm-menu-wrap {
     top: 0;
     z-index: 55 !important;

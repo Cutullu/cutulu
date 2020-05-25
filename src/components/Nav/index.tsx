@@ -12,11 +12,12 @@ import {
   StartButton
 } from "./styles";
 import { slide as Menu } from "react-burger-menu";
-import { useMedia, useToggle } from "react-use";
+import { useMedia, useToggle, useLockBodyScroll } from "react-use";
 
-const Nav = () => {
+const Nav: React.FC<{menuAction?:any}> = ({menuAction}) => {
   const isSmall = useMedia("(max-width: 800px)");
   const [isMenuOpened, toggleMenu] = useToggle(false);
+  useLockBodyScroll(isMenuOpened);
   const handleStateChange = React.useCallback(state => {
     toggleMenu(state.isOpen);
   }, []);
@@ -46,7 +47,7 @@ const Nav = () => {
             <BurguerMenu
               isMenuOpened={isMenuOpened}
               pinned={isMenuOpened}
-              onClick={() => toggleMenu()}
+              onClick={() => menuAction ? menuAction() :toggleMenu()}
             />
           ) : (
             <Links>

@@ -2,6 +2,7 @@ import React from "react";
 import { createGlobalStyle, ThemeProvider } from "src/lib/StyledComponents";
 import { theme } from "src/theme";
 import Nav from "src/components/Nav";
+import { useLocation, useMedia } from "react-use";
 // import Footer from "src/components/Footer";
 // import { useLocation } from "react-use";
 
@@ -76,22 +77,23 @@ const GlobalStyle = createGlobalStyle`
   }
 
 `;
-// const getDocsFromLocation = (path: string | undefined) => {
-//   if (typeof path !== "string") {
-//     return false;
-//   }
-//   const paths = path.split("/");
-//   if (paths[1] === "docs") return true;
-//   return false;
-// };
+const getDocsFromLocation = (path: string | undefined) => {
+  if (typeof path !== "string") {
+    return false;
+  }
+  const paths = path.split("/");
+  if (paths[1] === "guides") return true;
+  return false;
+};
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // const location = useLocation();
-  // const isDocs = getDocsFromLocation(location.pathname);
+  const location = useLocation();
+  const small = useMedia('(min-width: 780px');
+  const isGuides = getDocsFromLocation(location.pathname);
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Nav />
+      {(isGuides && small) && <Nav />}
       {children}
       {/* {!isDocs && <Footer />} */}
     </ThemeProvider>
