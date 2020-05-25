@@ -4,15 +4,13 @@ import { animateScroll as scroll } from "react-scroll";
 import slug from '@rocketseat/gatsby-theme-docs/src/util/slug';
 
 import { Container } from './styles';
-import { useHash } from 'react-use';
-import decode_utf8 from '../../../../../utils/decode_utf8'
+import useHash from "../../../../../utils/useHash";
 
 export default function TableOfContents({ headings }) {
   const [hash, setHash] = useHash();
   React.useEffect(()=>{
     setTimeout(()=>{
       handleGoTo(decodeURI(hash));
-
     }, 80)
     
   }, [hash])
