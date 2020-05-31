@@ -134,12 +134,23 @@ export default function GlobalStyle() {
           padding: 12px;
         }
 
+        th[align="center"], td[align="center"]{
+          text-align: center;
+        }
+
+        thead tr {
+          background-color: #2C5E3E;
+          color: white;
+          letter-spacing: 0.12rem;
+        }
+
         tr:nth-of-type(2n) td {
           background-color: ${theme.colors.sidebar.itemActive};
         }
 
         tr {
-          background-color: #ffffff;
+          background-color: #232323;
+          color: rgba(255,255,255,0.8);
         }
 
         iframe {
